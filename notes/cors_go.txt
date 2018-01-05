@@ -1,0 +1,24 @@
+c := cors.New(cors.Options{
+  AllowedOrigins: []string{"http://foo.com"},
+})
+
+
+handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set("Content-Type", "application/json")
+    w.Write([]byte("{\"hello\": \"world\"}"))
+  })
+
+handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set("Content-Type", "application/json")
+    w.Write([]byte("{\"hello\": \"world\"}"))
+  })
+
+
+http.ListenAndServe(":8080", c.Handler(handler))
+
+
+https://github.com/rs/cors
+
+https://github.com/rs/cors/blob/master/examples/nethttp/server.go
+
+w.Header().Set("Access-Control-Allow-Origin", "*")

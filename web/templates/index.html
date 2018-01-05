@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Websend</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8" src='/static/scripts/main.js'></script>
+</head>
+<body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Websend</h2>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" id="motorson" class="btn btn-secondary cmd-btn">Motors on</button>
+            <button type="button" id="motorsoff" class="btn btn-secondary cmd-btn">Motors off</button>
+            <button type="button" id="zero" class="btn btn-secondary cmd-btn">Zero</button>
+          </div>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 form-wrapper">
+          <!-- dropdown -->
+          <div class="form-group">
+            <label for="sel1">Select File Type:</label>
+            <select class="form-control" id="select-form">
+              <option value="motion" selected>motion</option>
+              <option value="cartesian">cartesian</option>
+            </select>
+          </div>
+          <!-- dropdown end -->
+          <!-- file name input -->
+          <div>
+            <div id='file-name-input-wrapper' class="form-group">
+              <label>File Name:</label>
+              <input id='file-name-input' class='form-control' placeholder='File Name'></input>
+            </div>
+          </div>
+           <!-- file name input end -->
+
+          <!-- form -->
+          <div id="form-content"/>
+            <h3>Data:</h3>
+            <form id='file-form'></form>
+            <button type="submit" id="form-add-data-btn" class="btn btn-secondary">Add Motion</button>
+          </div>
+          <!-- form end -->
+        </div>
+
+        <div class="col-md-6" id="preview"> 
+          <h3 class="preview-title">File Preview:</h3>
+          <div id='preview-content'>
+          </div>
+          <button id="save-file-btn" class="btn btn-secondary">Save File</button>
+          <button id="send-file-btn" class="btn btn-info">Send File</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

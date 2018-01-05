@@ -1,0 +1,14 @@
+version: '2'
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile-pi
+    container_name: loader-web
+    environment:
+      ENV: develop
+    volumes:
+      - .:/app
+    ports:
+      - "170:9000"
+    restart: on-failure

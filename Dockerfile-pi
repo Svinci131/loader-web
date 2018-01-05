@@ -1,0 +1,8 @@
+FROM resin/raspberry-pi-alpine:3.4
+RUN apk add --update python py-pip
+ADD ./web /app/web
+WORKDIR /app/web
+RUN pip install -r requirements.txt
+ENTRYPOINT ["python"]
+EXPOSE 9000
+CMD ["app.py"]

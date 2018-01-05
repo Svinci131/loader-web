@@ -1,0 +1,12 @@
+LINKS:
+
+https://toub.es/2017/07/13/docker-raspberry-pi-perfect-combo/
+https://blog.alexellis.io/5-things-docker-rpi/
+
+
+SET UP DOCKER ON PI:
+
+sudo apt-get -y install python-pip && \
+sudo pip install docker-compose
+
+https://hub.docker.com/r/resin/raspberry-pi-alpine/

@@ -1,0 +1,10 @@
+#preview-content {
+  min-height: 300px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+h2.preview-title {
+  margin-top: 0px!important; 
+}
